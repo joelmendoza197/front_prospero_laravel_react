@@ -1,13 +1,23 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+  :root {
+    /* Formato: R G B (sin comas) */
+    --color-brand: 74 124 89;          /* Verde Principal (#4a7c59) */
+    --color-brand-soft: 220 243 232;   /* Verde Suave (#dcf3e8) */
+    --color-bg-panel: 35 29 25;        /* Fondo Oscuro (#231d19) */
+    --color-bg-primary: 244 241 234;   /* Fondo Crema (#f4f1ea) */
+    --color-text-main: 26 22 20;       /* Texto/Botones (#1a1614) */
+  }
+
+  /* Valores para el Modo Oscuro */
+  .dark {
+    --color-brand: 100 180 120;
+    --color-brand-soft: 30 50 40;
+    --color-bg-panel: 10 10 10;
+    --color-bg-primary: 18 18 18;
+    --color-text-main: 240 240 240;
+  }
 }
